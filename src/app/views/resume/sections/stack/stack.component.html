@@ -1,0 +1,18 @@
+<div>
+  <h2 class="text-3xl font-bold mb-8 bg-gradient-to-r from-white via-sky-500 to-slate-500 animate-text bg-clip-text text-transparent">Stack</h2>
+  <ul class="grid grid-cols-9 place-items-center gap-y-8 gap-4">
+    @for (e of stack; track $index) {
+      <li
+        class="w-12 h-12 flex justify-center items-center select-none transition duration-300 ease-in-out transform hover:scale-110"
+        [style]="{'filter': 'drop-shadow(0 0 15px' + e.color + ')'}"
+        [ngClass]="'hover:drop-shadow-[0 0 25px' + e.color + ']'"
+        [title]="e.name"
+      >
+        <app-tooltip [text]="e.name" [color]="e.color">
+          <img src="{{ e.logo }}" alt="{{ e.name }}" class="max-h-10">
+        </app-tooltip>
+      </li>
+    }
+  </ul>
+</div>
+
