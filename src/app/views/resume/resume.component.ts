@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PresentationComponent } from './sections/presentation/presentation.component';
+import { ExperienceComponent } from './sections/experience/experience.component';
 import { StackComponent } from './sections/stack/stack.component';
 
 @Component({
@@ -7,6 +8,7 @@ import { StackComponent } from './sections/stack/stack.component';
   standalone: true,
   imports: [
     PresentationComponent,
+    ExperienceComponent,
     StackComponent
   ],
   templateUrl: './resume.component.html',
