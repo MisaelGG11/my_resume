@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styles: ``
 })
 export class PresentationComponent {
-
+  showCV() {
+    window.open('assets/docs/Hoja de Vida CV - Misael Gómez.pdf', '_blank');
+  }
 }
