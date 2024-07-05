@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PresentationComponent } from './sections/presentation/presentation.component';
 import { ExperienceComponent } from './sections/experience/experience.component';
+import { ProjectsComponent } from './sections/projects/projects.component';
 import { StackComponent } from './sections/stack/stack.component';
 
 @Component({
@@ -9,6 +10,7 @@ import { StackComponent } from './sections/stack/stack.component';
   imports: [
     PresentationComponent,
     ExperienceComponent,
+    ProjectsComponent,
     StackComponent
   ],
   templateUrl: './resume.component.html',
