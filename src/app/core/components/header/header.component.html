@@ -1,5 +1,6 @@
-<header>
-  <nav class="flex items-center justify-between z-20 fixed left-[25%] top-4 w-1/2 rounded-full px-16 py-2.5 backdrop-blur-sm bg-blue-950/60">
+<header class="flex justify-center w-full">
+  <!-- Menu para tablets y computadoras -->
+  <nav class=" hidden md:flex items-center justify-between fixed z-20 w-full max-w-3xl rounded-full mt-3 px-16 py-2.5 backdrop-blur-sm bg-blue-950/60" aria-label="label">
     <ul class="flex items-center justify-center gap-10">
       <li>
         <a
@@ -43,5 +44,83 @@
         </a>
       </li>
     </ul>
+  </nav>
+
+  <!-- Menu para moviles -->
+  <nav class=" flex md:hidden items-center justify-between z-20 w-screen fixed top-0 px-6 py-2.5 backdrop-blur-sm bg-blue-950/60" aria-label="label">
+    <div class="flex items-center">
+      <img
+        src="assets/images/logos/logo.png"
+        alt="Logo"
+        class="w-7 h-7 mx-1"
+      />
+    </div>
+    <div class="flex items-center">
+      <button
+        aria-label="Abrir menú"
+        class="text-sky-500 font-semibold hover:text-sky-300 transition-all"
+        (click)="handleShowMenu()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <div
+      id="Navbar"
+      class="z-10 hidden font-normal backdrop-blur-sm bg-blue-950/70 rounded-lg shadow w-44 transform transition-all duration-300 ease-in-out"
+      [ngClass]="{
+        'hidden': !showMenu,
+        'block fixed right-0 top-12': showMenu
+      }"
+    >
+      <ul class="flex flex-col items-center justify-center gap-4 py-4">
+        <li>
+          <a
+            href="#presentation"
+            class="text-sky-500 font-semibold hover:text-sky-300 transition-all"
+          >
+            Presentación
+          </a>
+        </li>
+        <li>
+          <a
+            href="#experience"
+            class="text-sky-500  font-semibold hover:text-sky-300 transition-all"
+          >
+            Experiencia
+          </a>
+        </li>
+        <li>
+          <a
+            href="#projects"
+            class="text-sky-500  font-semibold hover:text-sky-300 transition-all"
+          >
+            Proyectos
+          </a>
+        </li>
+        <li>
+          <a
+            href="#stack"
+            class="text-sky-500 font-semibold hover:text-sky-300 transition-all"
+          >
+            Stack
+          </a>
+        </li>
+      </ul>
+    </div>
+
   </nav>
 </header>
