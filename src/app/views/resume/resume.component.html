@@ -1,23 +1,24 @@
-<main class="flex flex-col items-center justify-center pb-16 bg-[#04081d] gap-8 px-8">
+<main class="flex flex-col items-center justify-center pb-16 bg-[#04081d] px-8">
+  <app-header></app-header>
   <section id="presentation" class="custom-gradient text-white min-h-screen flex items-center justify-center w-full">
     <app-presentation></app-presentation>
   </section>
   @defer (on viewport) {
-    <section class="max-w-3xl w-full mb-4">
+    <section class="max-w-3xl w-full pt-24" id="experience">
         <app-experience></app-experience>
     </section>
   } @placeholder {
     <p>Cargando experiencia...</p>
   }
   @defer (on viewport) {
-    <section class="max-w-3xl w-full mb-4">
+    <section class="max-w-3xl w-full pt-24" id="projects">
         <app-projects></app-projects>
     </section>
   } @placeholder {
     <p>Cargando proyectos...</p>
   }
   @defer (on viewport) {
-    <section class="max-w-3xl w-full mb-4">
+    <section class="max-w-3xl w-full pt-24" id="stack">
         <app-stack></app-stack>
     </section>
   } @placeholder {
