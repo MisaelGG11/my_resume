@@ -32,3 +32,19 @@
   border-radius: 8px;
   padding: 1px; /* Ajusta este valor para controlar el grosor del borde */
 }
+
+.custom-scroll-bar::-webkit-scrollbar {
+  width: 10px;
+  background-color: #04081d !important;
+}
+.custom-scroll-bar::-webkit-scrollbar-track {
+  border-radius: 35px;
+  background-color: #04081d;
+}
+.custom-scroll-bar::-webkit-scrollbar-thumb {
+  border-radius: 35px;
+  background-color: #3b83f69a;
+}
+.custom-scroll-bar::-webkit-scrollbar-thumb:hover {
+  background-color: #549cff;
+}
