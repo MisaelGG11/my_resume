@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { HeaderComponent } from '../../core/components/header/header.component';
 import { PresentationComponent } from './sections/presentation/presentation.component';
 import { ExperienceComponent } from './sections/experience/experience.component';
 import { ProjectsComponent } from './sections/projects/projects.component';
 import { StackComponent } from './sections/stack/stack.component';
-import { HeaderComponent } from '../../core/components/header/header.component';
+import { FooterComponent } from '../../core/components/footer/footer.component';
 
 @Component({
   selector: 'app-resume',
@@ -13,7 +14,8 @@ import { HeaderComponent } from '../../core/components/header/header.component';
     PresentationComponent,
     ExperienceComponent,
     ProjectsComponent,
-    StackComponent
+    StackComponent,
+    FooterComponent
   ],
   templateUrl: './resume.component.html',
   styles: `
