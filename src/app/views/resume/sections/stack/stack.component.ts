@@ -79,10 +79,15 @@ export class StackComponent {
       color: "#E0234E",
        logo: '../../../../assets/icons/nest.svg'
     },
+    // {
+    //   name: "GraphQL",
+    //   color: "#F6009C",
+    //    logo: '../../../../assets/icons/graphql.svg'
+    // },
     {
-      name: "GraphQL",
-      color: "#F6009C",
-       logo: '../../../../assets/icons/graphql.svg'
+      name: 'Docker',
+      color: "#2496ED",
+      logo: '../../../../assets/icons/docker.svg'
     },
     {
       name: "Laravel",
