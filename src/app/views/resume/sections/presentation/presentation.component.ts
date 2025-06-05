@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-presentation',
-    imports: [],
-    templateUrl: './presentation.component.html',
-    styles: ``
+  selector: 'presentation-section',
+  standalone: true,
+  imports: [],
+  templateUrl: './presentation.component.html',
+  styles: ``,
 })
 export class PresentationComponent {
   showCV() {

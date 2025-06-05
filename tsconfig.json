@@ -17,7 +17,7 @@
       "@store/*": ["src/app/store/*"],
       "@validators/*": ["src/app/validators/*"],
       "@utils/*": ["src/app/utils/*"],
-      "@resume/*": ["src/app/viewresume/*"],
+      "@resume/*": ["src/app/views/resume/*"],
     },
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
