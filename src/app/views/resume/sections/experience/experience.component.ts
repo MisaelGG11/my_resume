@@ -3,11 +3,10 @@ import { ExperienceCardComponent } from "./components/experience-card/experience
 import { Experience } from '../../../../interfaces/experience.interfaces';
 
 @Component({
-  selector: 'app-experience',
-  standalone: true,
-  imports: [ExperienceCardComponent],
-  templateUrl: './experience.component.html',
-  styles: ``
+    selector: 'app-experience',
+    imports: [ExperienceCardComponent],
+    templateUrl: './experience.component.html',
+    styles: ``
 })
 export class ExperienceComponent {
   experience = signal<Experience[]>([

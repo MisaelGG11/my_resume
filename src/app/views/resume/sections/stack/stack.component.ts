@@ -3,14 +3,13 @@ import { Component } from '@angular/core';
 import { TooltipComponent } from '../../../../core/components/tooltip/tooltip.component';
 
 @Component({
-  selector: 'app-stack',
-  standalone: true,
-  imports: [
-    CommonModule,
-    TooltipComponent
-  ],
-  templateUrl: './stack.component.html',
-  styles: ``
+    selector: 'app-stack',
+    imports: [
+        CommonModule,
+        TooltipComponent
+    ],
+    templateUrl: './stack.component.html',
+    styles: ``
 })
 export class StackComponent {
   stack = [

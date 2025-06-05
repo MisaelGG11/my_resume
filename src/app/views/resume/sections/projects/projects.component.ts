@@ -3,11 +3,10 @@ import { ProjectCardComponent } from "./components/project-card/project-card.com
 import { MainProject } from '@interfaces/projects.interface';
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [ProjectCardComponent],
-  templateUrl: './projects.component.html',
-  styles: `
+    selector: 'app-projects',
+    imports: [ProjectCardComponent],
+    templateUrl: './projects.component.html',
+    styles: `
     .underline-hover::after {
       content: '';
       position: absolute;

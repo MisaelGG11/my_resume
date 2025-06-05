@@ -3,11 +3,10 @@ import { HighlightPipe } from '../../../../../../pipes/highlight.pipe';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'experience-card',
-  standalone: true,
-  imports: [CommonModule, HighlightPipe],
-  templateUrl: './experience-card.component.html',
-  styles: ``
+    selector: 'experience-card',
+    imports: [CommonModule, HighlightPipe],
+    templateUrl: './experience-card.component.html',
+    styles: ``
 })
 export class ExperienceCardComponent {
   @Input({ required: true }) position: string = '';

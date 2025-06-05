@@ -2,15 +2,14 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'project-card',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './project-card.component.html',
-  styles: ``,
-  host: {
-    class: 'rounded-xl bg-[#090c2f] shadow-lg shadow-[#FFFFFF08] transition duration-300 ease-in-out transform hover:scale-[1.03] hover:border border-sky-500/50 overflow-hidden',
-    '[class.horizontal-card]': 'this.id === 3'
-  }
+    selector: 'project-card',
+    imports: [CommonModule],
+    templateUrl: './project-card.component.html',
+    styles: ``,
+    host: {
+        class: 'rounded-xl bg-[#090c2f] shadow-lg shadow-[#FFFFFF08] transition duration-300 ease-in-out transform hover:scale-[1.03] hover:border border-sky-500/50 overflow-hidden',
+        '[class.horizontal-card]': 'this.id === 3'
+    }
 })
 export class ProjectCardComponent {
   @Input({ required: true }) id!: number; // Unique identifier for the project
