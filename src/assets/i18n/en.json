@@ -1,0 +1,20 @@
+{
+  "presentation": {
+    "hello": "Hello",
+    "name": "I'm Misael",
+    "position": "Fullstack Developer",
+    "description": "👨‍💻 2+ years of experience. Computer Systems Engineer. Fullstack developer specialized in web applications. 🚀 Passionate about creating innovative and efficient solutions. 🛠️ Expert in modern technologies and the implementation of development best practices.",
+    "highlightedWords": [
+      "2+ years of experience",
+      "Passionate about creating innovative and efficient solutions",
+      "modern technologies"
+    ],
+    "downloadCV": "Download CV",
+    "contactMe": "Contact me",
+    "socialMedia": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    }
+  }
+}

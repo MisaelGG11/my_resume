@@ -1,0 +1,20 @@
+{
+  "presentation" : {
+    "hello": "Hola",
+    "name": "Soy Misael",
+    "position": "Desarrollador Fullstack",
+    "description": "👨‍💻 +2 años de experiencia. Ingeniero de Sistemas informáticos. Desarrollador Fullstack especializado en aplicaciones web. 🚀 Apasionado por crear soluciones innovadoras y eficientes. 🛠️ Experto en tecnologías modernas y en la implementación de buenas prácticas de desarrollo.",
+    "highlightedWords": [
+      "+2 años de experiencia",
+      "Apasionado por crear soluciones innovadoras y eficientes",
+      "tecnologías modernas"
+    ],
+    "downloadCV": "Descarga mi CV",
+    "contactMe": "Contáctame",
+    "socialMedia": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Correo electrónico"
+    }
+  }
+}

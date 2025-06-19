@@ -9,20 +9,23 @@
     />
   </div>
   <div class="md:-ml-5 md:col-span-2 text-left">
+    <div class="flex mb-8">
+      <lang-selector></lang-selector>
+    </div>
     <h1 class="text-3xl md:4xl lg:text-5xl font-bold">
-      👋 Hola, <span class="text-sky-400 text5xl">soy Misael</span>
+      👋 {{ 'presentation.hello' | translate }}, <span class="text-sky-400 text5xl">{{ 'presentation.name' | translate }}</span>
     </h1>
     <p>
       💻
       <span
         class="md:text-xl lg:text-2xl mb-5 mt-2 font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 animate-text bg-clip-text text-transparent"
       >
-        Desarrollador Fullstack
+        {{ 'presentation.position' | translate }}
       </span>
     </p>
     <div
       class="text-sm sm:text-medium md:text-base lg:text-lg mt-4 text-pretty"
-      [innerHTML]="description() | highlight: highlightedWords() : 'text-sky-400'"
+      [innerHTML]="('presentation.description' | translate) | highlight: ('presentation.highlightedWords' | translate) : 'text-sky-400'"
     >
     </div>
 
@@ -44,7 +47,7 @@
           >
           <span
             class="bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 animate-text bg-clip-text text-transparent"
-            >Descarga mi CV</span
+            >{{ 'presentation.downloadCV' | translate }}</span
           >
         </div>
       </button>
@@ -80,7 +83,7 @@
               ></path>
             </g>
           </svg>
-          Contáctame
+          {{ 'presentation.contactMe' | translate }}
         </button>
       </a>
 
@@ -116,7 +119,7 @@
               ></path>
             </g>
           </svg>
-          LinkedIn
+          {{ 'presentation.socialMedia.linkedin' | translate }}
         </button>
       </a>
 
@@ -166,7 +169,7 @@
               </g>
             </g>
           </svg>
-          Github
+          {{ 'presentation.socialMedia.github' | translate }}
         </button>
       </a>
     </div>
