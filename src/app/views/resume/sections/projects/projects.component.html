@@ -1,5 +1,5 @@
 <div>
-  <h2 class="text-3xl font-bold mb-8 bg-gradient-to-r from-white via-sky-500 to-slate-500 animate-text bg-clip-text text-transparent">Proyectos</h2>
+  <h2 class="text-3xl font-bold mb-8 bg-gradient-to-r from-white via-sky-500 to-slate-500 animate-text bg-clip-text text-transparent">{{ 'mainProjects.title' | translate }}</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
     @for(project of mainProjects(); track project.id) {
@@ -16,7 +16,7 @@
   </div>
   <div class="mt-8 flex justify-center">
     <a href="#" class="space-x-1 relative font-semibold text-white flex items-center cursor-pointer underline-hover">
-      Más proyectos
+      {{ 'mainProjects.moreProjects' | translate }}
       <svg width="1.4rem" height="1.4rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
         <g id="SVGRepo_iconCarrier">

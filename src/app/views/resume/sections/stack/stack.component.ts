@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { TooltipComponent } from '@components/tooltip/tooltip.component';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'stack-section',
   standalone: true,
-  imports: [CommonModule, TooltipComponent],
+  imports: [CommonModule, TranslatePipe, TooltipComponent],
   templateUrl: './stack.component.html',
   styles: ``,
 })

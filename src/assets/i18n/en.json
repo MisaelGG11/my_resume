@@ -1,4 +1,15 @@
 {
+  "header": {
+    "presentation": "Presentation",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "stack": "Stack",
+    "language": "Language"
+  },
+  "footer": {
+    "note": "2024 - misael.dev almost all rights reserved"
+  },
   "presentation": {
     "hello": "Hello",
     "name": "I'm Misael",
@@ -63,6 +74,7 @@
   },
   "mainProjects": {
     "title": "Projects",
+    "moreProjects": "More projects",
     "items": [
       {
         "id": 1,

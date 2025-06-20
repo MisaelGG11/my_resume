@@ -3,11 +3,12 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
 import { MainProject } from '@interfaces/projects.interface';
 import { LangService } from '@app/services/lang.service';
 import { TranslateService } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'projects-section',
   standalone: true,
-  imports: [ProjectCardComponent],
+  imports: [TranslatePipe, ProjectCardComponent],
   templateUrl: './projects.component.html',
   styles: `
     .underline-hover::after {
