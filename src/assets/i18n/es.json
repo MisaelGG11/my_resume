@@ -16,5 +16,98 @@
       "linkedin": "LinkedIn",
       "email": "Correo electrónico"
     }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "present": "Presente",
+    "items": [
+      {
+        "position": "Desarrollador Fullstack",
+        "company": "Secretaría de Innovación",
+        "initDate": "2023-07-10",
+        "endDate": null,
+        "functions": [
+          {
+            "icon": "language",
+            "description": "Diseño y desarrollo de interfaces de usuario modernas y responsivas utilizando HTML, CSS, TailwindCSS, PrimeVue, JavaScript, TypeScript y Vue.js.",
+            "highlightedWords": ["diseño", "desarrollo", "responsivas"]
+          },
+          {
+            "icon": "database",
+            "description": "Implementación y mantenimiento de lógica de servidor, bases de datos y APIs con tecnologías como Node.js (Express.js y Nest.js) y Laravel.",
+            "highlightedWords": ["implementación", "APIs", "Node", "Laravel"]
+          },
+          {
+            "icon": "accessibility",
+            "description": "Aseguramiento de la accesibilidad y usabilidad de aplicaciones web para todos los usuarios.",
+            "highlightedWords": ["accesibilidad", "usabilidad"]
+          },
+          {
+            "icon": "groups",
+            "description": "Colaboración multidisciplinaria con diseñadores y desarrolladores para entregar productos de alta calidad y coherencia.",
+            "highlightedWords": ["colaboración", "alta calidad", "coherencia"]
+          },
+          {
+            "icon": "bug_report",
+            "description": "Ejecución de pruebas y depuración para garantizar el correcto funcionamiento y rendimiento de las aplicaciones.",
+            "highlightedWords": ["pruebas", "depuración", "rendimiento"]
+          },
+          {
+            "icon": "api",
+            "description": "Integración de servicios externos mediante APIs RESTful para ampliar la funcionalidad de las aplicaciones.",
+            "highlightedWords": ["integración", "APIs RESTful"]
+          }
+        ]
+      }
+    ]
+  },
+  "mainProjects": {
+    "title": "Proyectos",
+    "items": [
+      {
+        "id": 1,
+        "title": "Bolsa de trabajo TalentHub",
+        "description": "Una plataforma de bolsa de trabajo innovadora que conecta de manera eficiente a empresas y profesionales, ofreciendo oportunidades laborales relevantes y personalizadas para encontrar el empleo perfecto.",
+        "imageUrl": "assets/images/projects/TalentHub.webp",
+        "repositoryUrl": "https://github.com/MisaelGG11/bad115-frontend",
+        "technologies": [
+          "Angular",
+          "TailwindCSS",
+          "TypeScript",
+          "PrimeNG",
+          "Nest.js",
+          "SQLServer"
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Vetenaria MISTUN",
+        "description": "El Sistema de Gestión Veterinaria \"ARTEMIS\" optimiza los procesos de la veterinaria MISTUN mediante módulos para gestionar servicios, seguridad, clientes, mascotas, citas, cirugías, ventas, citas y estadísticas",
+        "imageUrl": "assets/images/projects/Vet-Mistun.webp",
+        "technologies": [
+          "Express.js",
+          "PostgreSQL",
+          "Nest.js",
+          "React.js",
+          "Node.js",
+          "MaterialUI",
+          "CSS"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "SmartCity Challenge",
+        "description": "Con SmartCity Challenge, presenta soluciones innovadoras innovadoras en diversos ecosistemas utilizando Minecraft. Esta plataforma facilita la interacción entre participantes y jurados, promoviendo la creatividad, resiliencia e innovación.",
+        "imageUrl": "assets/images/projects/SmartCity.webp",
+        "technologies": [
+          "Vue",
+          "PostgreSQL",
+          "PrimeVue",
+          "Laravel",
+          "TailwindCSS",
+          "Node.js"
+        ]
+      }
+    ]
   }
 }

@@ -2,7 +2,7 @@
   <h2
     class="text-3xl font-bold mb-8 bg-gradient-to-r from-white via-sky-500 to-slate-500 animate-text bg-clip-text text-transparent"
   >
-    Experiencia
+    {{ 'experience.title' | translate }}
   </h2>
 
   <div class="flex flex-col gap-8">
@@ -10,8 +10,8 @@
       <experience-card
         [position]="exp.position"
         [company]="exp.company"
-        [fechaInicio]="exp.fechaInicio"
-        [fechaFin]="exp.fechaFin!"
+        [initDate]="exp.initDate"
+        [endDate]="exp.endDate!"
         [functions]="exp.functions"
       />
     }

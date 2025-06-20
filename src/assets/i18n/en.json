@@ -16,5 +16,98 @@
       "linkedin": "LinkedIn",
       "email": "Email"
     }
+  },
+  "experience": {
+    "title": "Experience",
+    "present" : "Present",
+    "items": [
+      {
+        "position": "Fullstack Developer",
+        "company": "Secretaría de Innovación",
+        "initDate": "2023-07-10",
+        "endDate": null,
+        "functions": [
+          {
+            "icon": "language",
+            "description": "Design and development of modern and responsive user interfaces using HTML, CSS, TailwindCSS, PrimeVue, JavaScript, TypeScript, and Vue.js.",
+            "highlightedWords": ["design", "development", "responsive"]
+          },
+          {
+            "icon": "database",
+            "description": "Implementation and maintenance of server logic, databases, and APIs with technologies such as Node.js (Express.js and Nest.js) and Laravel.",
+            "highlightedWords": ["implementation", "APIs", "Node", "Laravel"]
+          },
+          {
+            "icon": "accessibility",
+            "description": "Ensuring accessibility and usability of web applications for all users.",
+            "highlightedWords": ["accessibility", "usability"]
+          },
+          {
+            "icon": "groups",
+            "description": "Multidisciplinary collaboration with designers and developers to deliver high-quality and consistent products.",
+            "highlightedWords": ["collaboration", "high quality", "consistency"]
+          },
+          {
+            "icon": "bug_report",
+            "description": "Execution of testing and debugging to ensure proper functionality and performance of applications.",
+            "highlightedWords": ["testing", "debugging", "performance"]
+          },
+          {
+            "icon": "api",
+            "description": "Integration of external services through RESTful APIs to extend application functionality.",
+            "highlightedWords": ["integration", "RESTful APIs"]
+          }
+        ]
+      }
+    ]
+  },
+  "mainProjects": {
+    "title": "Projects",
+    "items": [
+      {
+        "id": 1,
+        "title": "TalentHub Job Board",
+        "description": "An innovative job board platform that efficiently connects companies and professionals, offering relevant and personalized job opportunities to find the perfect job.",
+        "imageUrl": "assets/images/projects/TalentHub.webp",
+        "repositoryUrl": "https://github.com/MisaelGG11/bad115-frontend",
+        "technologies": [
+          "Angular",
+          "TailwindCSS",
+          "TypeScript",
+          "PrimeNG",
+          "Nest.js",
+          "SQLServer"
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Veterinary MISTUN",
+        "description": "The Veterinary Management System \"ARTEMIS\" optimizes the processes of the MISTUN veterinary clinic through modules for managing services, security, clients, pets, appointments, surgeries, sales, and statistics.",
+        "imageUrl": "assets/images/projects/Vet-Mistun.webp",
+        "technologies": [
+          "Express.js",
+          "PostgreSQL",
+          "Nest.js",
+          "React.js",
+          "Node.js",
+          "MaterialUI",
+          "CSS"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "SmartCity Challenge",
+        "description": "With SmartCity Challenge, innovative solutions are presented across various ecosystems using Minecraft. This platform facilitates interaction between participants and judges, promoting creativity, resilience, and innovation.",
+        "imageUrl": "assets/images/projects/SmartCity.webp",
+        "technologies": [
+          "Vue",
+          "PostgreSQL",
+          "PrimeVue",
+          "Laravel",
+          "TailwindCSS",
+          "Node.js"
+        ]
+      }
+    ]
   }
 }

@@ -1,6 +1,8 @@
-import { Component, signal } from '@angular/core';
+import { Component, effect, inject, signal } from '@angular/core';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { MainProject } from '@interfaces/projects.interface';
+import { LangService } from '@app/services/lang.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'projects-section',
@@ -29,53 +31,36 @@ import { MainProject } from '@interfaces/projects.interface';
   `,
 })
 export class ProjectsComponent {
-  mainProjects = signal<MainProject[]>([
-    {
-      id: 1,
-      title: 'Bolsa de trabajo TalentHub',
-      description:
-        'Una plataforma de bolsa de trabajo innovadora que conecta de manera eficiente a empresas y profesionales, ofreciendo oportunidades laborales relevantes y personalizadas para encontrar el empleo perfecto.',
-      imageUrl: 'assets/images/projects/TalentHub.webp',
-      repositoryUrl: 'https://github.com/MisaelGG11/bad115-frontend',
-      technologies: [
-        'Angular',
-        'TailwindCSS',
-        'TypeScript',
-        'PrimeNG',
-        'Nest.js',
-        'SQLServer',
-      ],
-    },
-    {
-      id: 2,
-      title: 'Vetenaria MISTUN',
-      description:
-        'El Sistema de Gestión Veterinaria "ARTEMIS" optimiza los procesos de la veterinaria MISTUN mediante módulos para gestionar servicios, seguridad, clientes, mascotas, citas, cirugías, ventas, citas y estadísticas',
-      imageUrl: 'assets/images/projects/Vet-Mistun.webp',
-      technologies: [
-        'Express.js',
-        'PostgreSQL',
-        'Nest.js',
-        'React.js',
-        'Node.js',
-        'MaterialUI',
-        'CSS',
-      ],
-    },
-    {
-      id: 3,
-      title: 'SmartCity Challenge',
-      description:
-        'Con SmartCity Challenge, presenta soluciones innovadoras innovadoras en diversos ecosistemas utilizando Minecraft. Esta plataforma facilita la interacción entre participantes y jurados, promoviendo la creatividad, resiliencia e innovación.',
-      imageUrl: 'assets/images/projects/SmartCity.webp',
-      technologies: [
-        'Vue',
-        'PostgreSQL',
-        'PrimeVue',
-        'Laravel',
-        'TailwindCSS',
-        'Node.js',
-      ],
-    },
-  ]);
+  private translateService = inject(TranslateService);
+  private langService = inject(LangService);
+
+  lang = signal<string>('');
+
+  mainProjects = signal<MainProject[]>([]);
+
+  constructor() {
+
+    this.langService.currentLang$.subscribe((lang) => {
+      this.lang.set(lang);
+    });
+
+    effect(() => {
+      if(this.lang()) {
+        this.translateService
+          .get('mainProjects.items')
+          .subscribe((items: MainProject[]) => {
+            const mainProjectsData = items.map((item, index) => ({
+              id: Number(item.id ?? (index+1)),
+              title: item.title,
+              description: item.description,
+              imageUrl: item.imageUrl || 'assets/images/no-image.png',
+              repositoryUrl: item.repositoryUrl || undefined,
+              technologies: item.technologies || [],
+              liveDemoUrl: item.liveDemoUrl || undefined,
+            }));
+            this.mainProjects.set(mainProjectsData);
+          });
+      }
+    });
+  }
 }

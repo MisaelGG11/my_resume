@@ -6,6 +6,10 @@ import { TranslateService } from "@ngx-translate/core";
 
 import { CookieService } from 'ngx-cookie-service'
 
+import { registerLocaleData } from '@angular/common';
+import localeEs from '@angular/common/locales/es';
+import localeEn from '@angular/common/locales/en';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -36,5 +40,8 @@ export class AppComponent {
       this.translateService.use('en');
       this.cookieService.set('lang', 'en', 365, '/');
     }
+
+    registerLocaleData(localeEs, 'es');
+    registerLocaleData(localeEn, 'en');
   }
 }

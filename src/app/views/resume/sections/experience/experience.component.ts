@@ -1,59 +1,50 @@
-import { Component, signal } from '@angular/core';
+import { Component, effect, inject, signal } from '@angular/core';
 import { ExperienceCardComponent } from './components/experience-card/experience-card.component';
 import { Experience } from '../../../../interfaces/experience.interfaces';
+import { TranslateService } from '@ngx-translate/core';
+import { LangService } from '@app/services/lang.service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'experience-section',
   standalone: true,
-  imports: [ExperienceCardComponent],
+  imports: [TranslatePipe, ExperienceCardComponent],
   templateUrl: './experience.component.html',
   styles: ``,
 })
 export class ExperienceComponent {
-  experience = signal<Experience[]>([
-    {
-      position: 'Desarrollador Fullstack',
-      company: 'Secretaría de Innovación',
-      fechaInicio: new Date('2023-07-10'),
-      fechaFin: undefined, // Ongoing position
-      functions: [
-        {
-          icon: 'language',
-          description:
-            'Diseño y desarrollo de interfaces de usuario modernas y responsivas utilizando HTML, CSS, TailwindCSS, PrimeVue, JavaScript, TypeScript y Vue.js.',
-          highlightedWords: ['diseño', 'desarrollo', 'responsivas'],
-        },
-        {
-          icon: 'database',
-          description:
-            'Implementación y mantenimiento de lógica de servidor, bases de datos y APIs con tecnologías como Node.js (Express.js y Nest.js) y Laravel.',
-          highlightedWords: ['implementación', 'APIs', 'Node', 'Laravel'],
-        },
-        {
-          icon: 'accessibility',
-          description:
-            'Aseguramiento de la accesibilidad y usabilidad de aplicaciones web para todos los usuarios.',
-          highlightedWords: ['accesibilidad', 'usabilidad'],
-        },
-        {
-          icon: 'groups',
-          description:
-            'Colaboración multidisciplinaria con diseñadores y desarrolladores para entregar productos de alta calidad y coherencia.',
-          highlightedWords: ['colaboración', 'alta calidad', 'coherencia'],
-        },
-        {
-          icon: 'bug_report',
-          description:
-            'Ejecución de pruebas y depuración para garantizar el correcto funcionamiento y rendimiento de las aplicaciones.',
-          highlightedWords: ['pruebas', 'depuración', 'rendimiento'],
-        },
-        {
-          icon: 'api',
-          description:
-            'Integración de servicios externos mediante APIs RESTful para ampliar la funcionalidad de las aplicaciones.',
-          highlightedWords: ['integración', 'APIs RESTful'],
-        },
-      ],
-    },
-  ]);
+  private translateService = inject(TranslateService);
+  private langService = inject(LangService);
+
+  lang = signal<string>('');
+
+  experience = signal<Experience[]>([]);
+
+  constructor() {
+
+    this.langService.currentLang$.subscribe((lang) => {
+      this.lang.set(lang);
+    });
+
+    effect(() => {
+      if(this.lang()) {
+        this.translateService
+          .get('experience.items')
+          .subscribe((items: Experience[]) => {
+            const experienceData = items.map((item) => ({
+              position: item.position,
+              company: item.company,
+              initDate: new Date(item.initDate),
+              endDate: item.endDate ? new Date(item.endDate) : undefined,
+              functions: item.functions.map((func) => ({
+                description: func.description,
+                highlightedWords: func.highlightedWords || [],
+                icon: func.icon || 'default-icon', // Provide a default icon if none is specified
+              }))
+            }));
+            this.experience.set(experienceData);
+          });
+      }
+    });
+  }
 }
