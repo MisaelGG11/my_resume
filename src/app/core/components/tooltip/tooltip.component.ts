@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-tooltip',
-  standalone: true,
-  imports: [],
-  templateUrl: './tooltip.component.html',
-  styles: `
+    selector: 'c-tooltip',
+    standalone: true,
+    imports: [],
+    templateUrl: './tooltip.component.html',
+    styles: `
   .tooltip-content {
     bottom: 100%;
     left: 50%;

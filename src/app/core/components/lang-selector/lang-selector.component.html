@@ -1,0 +1,51 @@
+<button
+  (click)="toggleLanguageDropdown()"
+  class="flex items-center gap-2 bg-[#0a0c1b30] border border-slate-700 text-white px-4 py-2 rounded-lg hover:bg-[#0a0c1b50] transition-colors duration-300 min-w-[140px] justify-between"
+>
+  <div class="flex items-center gap-2">
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
+      ></path>
+    </svg>
+    <span class="text-sm"
+      >{{ getCurrentLanguageData()!.flag }}
+      {{ getCurrentLanguageData()!.name }}</span
+    >
+  </div>
+  <svg
+    class="w-4 h-4 transition-transform duration-200"
+    [class.rotate-180]="isLanguageDropdownOpen()"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M19 9l-7 7-7-7"
+    ></path>
+  </svg>
+</button>
+
+<!-- Dropdown -->
+@if(isLanguageDropdownOpen()) {
+  <div
+    class="absolute top-full left-0 mt-1 min-w-[148px] bg-[#131733] border border-slate-600 rounded-lg shadow-lg z-50 overflow-hidden"
+  >
+    @for(lang of languageOptions(); track lang.code) {
+      <button
+        (click)="changeLanguage(lang.code)"
+        class="w-full flex items-center gap-2 px-4 py-2 text-left hover:bg-slate-900 transition-colors duration-200 text-white text-sm"
+        [class.bg-[#0a0c1b]]="lang.code === selectedLanguage()"
+      >
+        <span class="text-base">{{ lang.flag }}</span>
+        <span>{{ lang.name }}</span>
+      </button>
+    }
+  </div>
+}
